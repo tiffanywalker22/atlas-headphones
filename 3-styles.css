@@ -227,11 +227,72 @@ header {
     text-align: start;
 }
 
-.label input {
+.label > input {
     display: block;
     width: 100%;
     height: 40px;
     margin: 20px 0;
     border: none;
     color: var(--navy);
+}
+
+.label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--navy);
+}
+
+.label > input + span {
+    font-weight: bold;
+    display: block;
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    .icon {
+        flex: 0 0 calc(50% - 10px);
+    }
+    .imgs {
+        width: 100%;
+    }
+    .img {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* Media query for phones */
+@media only screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        text-align: center;
+    }
+    .nav-link {
+        margin-left: 0;
+    }
+    .main-title {
+        padding-top: 5rem;
+    }
+    .box {
+        background-size: auto 100%;
+    }
+    .icon {
+        flex: 0 0 calc(100% - 10px);
+    }
+    .imgs {
+        width: 100%;
+    }
+    .img {
+        flex: 0 0 calc(100% - 10px);
+    }
+    .contact-us,
+    footer {
+        margin-top: 40px;
+    }
 }

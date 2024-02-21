@@ -112,3 +112,49 @@ header {
     padding-bottom: 5rem;
     line-height: 26px;
 }
+
+/* Media query for tablets */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    .icon {
+        flex: 0 0 calc(50% - 10px);
+    }
+    .imgs {
+        width: 100%;
+    }
+    .img {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* Media query for phones */
+@media only screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        text-align: center;
+    }
+    .nav-link {
+        margin-left: 0;
+    }
+    .main-title {
+        padding-top: 5rem;
+    }
+    .box {
+        background-size: auto 100%;
+    }
+    .icon {
+        flex: 0 0 calc(100% - 10px);
+    }
+    .imgs {
+        width: 100%;
+    }
+    .img {
+        flex: 0 0 calc(100% - 10px);
+    }
+    .contact-us,
+    footer {
+        margin-top: 40px;
+    }
+}
